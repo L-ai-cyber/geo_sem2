@@ -239,7 +239,7 @@
     }
 
     function grav() {
-        let gravim = 2*parseFloat(document.getElementById("Grav1").value);
+        let gravim = 1*parseFloat(document.getElementById("Grav1").value);
         if (!gravim) {
             gravim = 0;
         } 
@@ -288,13 +288,9 @@
         let tectonics = tect();
         let gravy = grav();
         let statlar = stat();
-        
-        let langs = (engl+frl)/2;
-        let chem = (aom+tom+exp)/3;
-        let subjects = (tectonics+gravy+statlar)/3;
-        let physics = (wave+labb)/2;
+     
 
-        const avg = (mathem+physics+chem+Hemi+langs+subjects)/6;
+        const avg = (mathem+wave+labb+aom+tom+exp+Hemi+frl+engl+tectonics+gravy+statlar)/12;
         document.getElementById("FINAL").innerHTML = avg;
         
     }
