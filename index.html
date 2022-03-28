@@ -89,7 +89,7 @@
         <input type="number" id="Stat" name="Stat" placeholder="Final">
         <br>
         <br>
-        <input type="button" onclick="Final()" value="Submit All">
+        <input type="button" onclick="final()" value="Submit All">
         <div id="FINAL"></div>
     </form>
 </body>
@@ -263,14 +263,14 @@
     }
 
     function stat() {
-        let s = parseFloat(document.getElementById("ioi").value);
+        let s = parseFloat(document.getElementById("Stat").value);
         if (!s) {
             s = 0;
         }
         return s;
     }
 
-    function Final() {
+    function final() {
         let mathem = math();
 
         let wave = waves();
@@ -289,13 +289,13 @@
         let gravy = grav();
         let statlar = stat();
         
-        let langs = engl+frl;
-        let chem = aom+tom+exp;
-        let subjects = tectonics+gravy+statlar;
-        let physics = wave+labb;
+        let langs = (engl+frl)/2;
+        let chem = (aom+tom+exp)/3;
+        let subjects = (tectonics+gravy+statlar)/3;
+        let physics = (wave+labb)/2;
 
-        const avg = (mathem+physics+chem+Hemi+langs+subjects)/30;
+        const avg = (mathem+physics+chem+Hemi+langs+subjects)/6;
         document.getElementById("FINAL").innerHTML = avg;
-        return avg;
+        
     }
 </script>
