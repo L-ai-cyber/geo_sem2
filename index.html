@@ -91,6 +91,7 @@
         <br>
         <input type="button" onclick="final()" value="Submit All">
         <div id="FINAL"></div>
+        <div id="FINAL2"></div>
     </form>
 </body>
 </html>
@@ -111,7 +112,7 @@
         }
         const math_avg = (math1+math2+math3)/6;
         document.getElementById("MATH").innerHTML = math_avg;
-        return math_avg;
+        return math_avg*6;
     }
 
     function waves() {
@@ -127,7 +128,7 @@
 
         const w_avg = (w1+w2)/3;
         document.getElementById("WAVES").innerHTML = w_avg;
-        return w_avg;
+        return w_avg*3;
     }
 
     function lab() {
@@ -143,7 +144,7 @@
 
         const lab_avg = (lab1+lab2)/3;
         document.getElementById("LAB").innerHTML = lab_avg;
-        return lab_avg;
+        return lab_avg*3;
     }
 
     function AoM() {
@@ -157,7 +158,7 @@
         }
         const aom_avg = (aom1+aom2)/2;
         document.getElementById("AOM").innerHTML = aom_avg;
-        return aom_avg;
+        return aom_avg*2;
         }
 
     function ToM() {
@@ -171,7 +172,7 @@
         }
         const tom_avg = (tom1+tom2)/2;
         document.getElementById("TOM").innerHTML = tom_avg;
-        return tom_avg;
+        return tom_avg*2;
     }
 
     function Exper() {
@@ -185,7 +186,7 @@
         }
         const exp_avg = (exp1+exp3)/2;
         document.getElementById("EXPC").innerHTML = exp_avg;
-        return exp_avg;
+        return exp_avg*2;
     }
 
     function hemi() {
@@ -199,7 +200,7 @@
         }
         const hemi_avg = (hemi1+hemi3)/2;
         document.getElementById("hemi").innerHTML = hemi_avg;
-        return hemi_avg;
+        return hemi_avg*2;
     }
 
     function fr() {
@@ -217,7 +218,7 @@
         }
         const fr_avg = (fr1+fr2+fr3)/2;
         document.getElementById("FR").innerHTML = fr_avg;
-        return fr_avg;
+        return fr_avg*2;
     }
 
     function eng() {
@@ -235,7 +236,7 @@
         }
         const eng_avg = (eng1+eng2+eng3)/2;
         document.getElementById("ENG").innerHTML = eng_avg;
-        return eng_avg;
+        return eng_avg*2;
     }
 
     function grav() {
@@ -259,7 +260,7 @@
         
         const t_avg = (t1+t2)/3;
         document.getElementById("TECT").innerHTML = t_avg;
-        return t_avg;
+        return t_avg*3;
     }
 
     function stat() {
@@ -290,8 +291,9 @@
         let statlar = stat();
      
 
-        const avg = (mathem+wave+labb+aom+tom+exp+Hemi+frl+engl+tectonics+gravy+statlar)/12;
-        document.getElementById("FINAL").innerHTML = avg;
-        
+        const avg = (mathem+wave+labb+aom+tom+exp+Hemi+frl+engl+tectonics+gravy+statlar)/30;
+        document.getElementById("FINAL").innerHTML = "Out of 20: "+avg;
+        document.getElementById("FINAL2").innerHTML = "Out of 30: " +avg*1.5;
+
     }
 </script>
