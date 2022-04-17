@@ -86,7 +86,9 @@
         <br>
         <br>
         <label for="Stat">Statistics and metrology</label>
-        <input type="number" id="Stat" name="Stat" placeholder="Final">
+        <input type="number" id="Stat1" name="Stat1" placeholder="Midterm">
+        <input type="number" id="Stat2" name="Stat2" placeholder="Final">
+        <div id="STAT"></div>
         <br>
         <br>
         <input type="button" onclick="final()" value="Submit All">
@@ -244,7 +246,7 @@
         if (!gravim) {
             gravim = 0;
         } 
-        return gravim;
+        return gravim*2;
     }
 
     function tect() {
@@ -260,15 +262,24 @@
         
         const t_avg = (t1+t2)/3;
         document.getElementById("TECT").innerHTML = t_avg;
-        return t_avg*3;
+        return t_avg*2;
     }
 
     function stat() {
-        let s = parseFloat(document.getElementById("Stat").value);
-        if (!s) {
-            s = 0;
+        let s1 = parseFloat(document.getElementById("Stat1").value);
+        let s2 = 2*parseFloat(document.getElementById("Stat2").value);
+
+        if (!s1) {
+            s1 = 0;
         }
-        return s;
+        if (!s2) {
+            s2 = 0;
+        }
+        
+        const s_avg = (s1+s2)/3;
+        document.getElementById("STAT").innerHTML = s_avg;
+
+        return s_avg*2;
     }
 
     function final() {
